@@ -22,7 +22,7 @@ The problem is `async` pipe just marks the component and all its ancestors as di
 It needs zone.js microtask queue to exhaust until `ApplicationRef.tick` is called to render all dirty marked components.
 
 Heavy dynamic and interactive UIs suffer from zones change detection a lot and can
-lean to bad performance or even unusable applications, but the `async` pipe does not work in zone-less mode.
+lead to bad performance or even unusable applications, but the `async` pipe does not work in zone-less mode.
 
 `ngrxPush` pipe solves that problem. It can be used like shown here:
 
